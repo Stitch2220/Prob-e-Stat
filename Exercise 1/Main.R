@@ -9,7 +9,7 @@ library(datasets)
 
 
 # Import "Paises_PIB_ICH.csv" with readr library
-data <- read_csv("C:/Users/Catarina/Downloads/Paises_PIB_ICH.csv")
+data <- read_csv("~/Prob-e-Stat/Exercise 1/Paises_PIB_ICH.csv")
 View(data)
 filtered_data <- subset(data, data[,2] == "Africa" | data[,2] == "Asia")
 

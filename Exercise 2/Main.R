@@ -7,10 +7,10 @@ library(readr)
 library(ggplot2)
 
 # Read the CSV file
-data <- read_csv("C:/Users/Catarina/Downloads/master.csv")
+data <- read_csv("~/Prob-e-Stat/Exercise 2/master.csv")
 
 # Filter the data
-filtered_data <- subset(data, Year == "2002" & Age_group == "55-74 years")
+filtered_data <- subset(data, year == "2002" & age == "55-74 years")
 
 # Create the side-by-side box plots without the legend
 ggplot(filtered_data, aes(x = sex, y = `suicides/100k pop`, fill = sex)) +
@@ -18,7 +18,6 @@ ggplot(filtered_data, aes(x = sex, y = `suicides/100k pop`, fill = sex)) +
   labs(title = "Comparison of Suicides per 100k by Sex in 2002 (Age Group: 55-74 years)", 
        x = "Sex", 
        y = "Suicides per 100k") +
-  theme_minimal() +
-  guides(fill = FALSE)
+  theme_minimal()
 
 
